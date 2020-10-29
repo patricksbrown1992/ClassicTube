@@ -1,0 +1,28 @@
+.video-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 1100px;
+}
+.search-item a {
+  height: 200px;
+  width: 375px;
+}
+
+.search-right {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 720px;
+}
+
+.search-right div {
+  margin: 15px 0 15px 0;
+}
