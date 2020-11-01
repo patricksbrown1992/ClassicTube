@@ -10,10 +10,10 @@ const receiveVideos = (videos) => {
   };
 };
 
-const receiveVideo = (video) => ({
-  type: RECEIVE_VIDEO,
-  video,
-});
+const receiveVideo = (video) => {
+  debugger;
+  return { type: RECEIVE_VIDEO, video };
+};
 
 export const getVideos = () => (dispatch) => {
   return VideoAPIUtil.getVideos().then((videos) => {
@@ -26,3 +26,8 @@ export const getVideo = (id) => (dispatch) => {
     dispatch(receiveVideo(video));
   });
 };
+
+export const updateVideo = (video) => (dispatch) =>
+  VideoAPIUtil.updateVideo(video).then((video) =>
+    dispatch(receiveVideo(video))
+  );
