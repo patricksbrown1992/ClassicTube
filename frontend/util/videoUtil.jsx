@@ -11,3 +11,13 @@ export const getVideo = (id) => {
     url: `api/videos/${id}`,
   });
 };
+
+export const updateVideo = (video) => {
+  return $.ajax({
+    method: "PATCH",
+    url: `api/videos/${video.id}`,
+    data: {
+      video,
+    },
+  });
+};
